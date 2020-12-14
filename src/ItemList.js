@@ -93,7 +93,7 @@ function ItemList() {
       newArr.push(itemDatas[i]);
     }
   }
-  const aaaa = idSearch === "" && nameSearch === "";
+  const isSearch = idSearch === "" && nameSearch === "";
   const search = (
     <>
       <Table dataSource={newArr}>
@@ -198,14 +198,7 @@ function ItemList() {
           </Button>
         </div>
         <div className="itemlist_box">
-        {aaaa === true ? all : search}
-        <Pagination 
-        showQuickJumper 
-        defaultCurrent={2} 
-        total={500} 
-        onChange={onChange}
-        // pageSizeOptions={`[ '20', '40', '100']`}
-        />
+        {isSearch === true ? all : search}
         </div>
       </Content>
     </>
