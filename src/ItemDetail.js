@@ -22,7 +22,7 @@ import {
 } from "react-router-dom";
 
 function ItemDetail(props) {
-    // let { path, url } = useRouteMatch()
+    let { path, url } = useRouteMatch()
 
 //   const [itemDatas, setItemDatas] = useState("")
   const [itemId, setItemId] = useState("")
@@ -92,13 +92,10 @@ function ItemDetail(props) {
             <Link to="/items">
               <Button style={{ marginRight: "5px" }}>返回列表</Button>
             </Link>
-            <Link to={`itemedit/${itemId + itemSize}`}>
+            <Link to={`/itemedit/${itemId + itemSize}`}>
               <Button 
               style={{ marginLeft: "5px" }} 
-              type="primary" 
-              onClick={()=>{
-                // <Redirect to={`itemedit/${itemId + itemSize}`}/>
-              }}>
+              type="primary" >
                 編輯修改
               </Button>
             </Link>
