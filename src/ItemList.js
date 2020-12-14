@@ -6,8 +6,6 @@ import {
   Button,
   Breadcrumb,
   Table,
-  Divider,
-  Tag,
   Pagination,
 } from "antd";
 import {
